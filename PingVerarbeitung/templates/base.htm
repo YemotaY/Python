@@ -1,0 +1,13 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - OnlineCMD</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<section class="content">
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  <div id="main" style="height: 100%; width: 100%;"> 
+    <div id="header" style="height: 20%; width: 100%; margin-top: 5%;">{% block header %}{% endblock %}</div>
+    <div id="content" style="height: 80%; width: 100%; display: flex; justify-content: center;">{% block content %}{% endblock %}</div>
+  </div>
+  
+</section>

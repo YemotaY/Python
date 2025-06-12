@@ -1,0 +1,12 @@
+{% extends 'base.htm' %}
+{% include './components/menu.htm' %}
+{% block header %}
+<h1 style="text-align: center;">{% block title %}Result{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+<div id="content" style="clear: both;">
+  {% for message in res %}
+  <div class="flash">{{ message }}</div>
+  {% endfor %}
+</div>
+{% endblock %}

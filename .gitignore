@@ -175,3 +175,56 @@ cython_debug/
 
 #CUSTOM
 Logs/
+
+# Virtual environments (projektspezifische Namen)
+venvConwayFinder/
+chess/
+mmover/
+opcua/
+opcuaVENV/
+env/
+
+# SQLite Datenbanken (enthalten potentiell private Daten)
+*.sqlite
+*.sqlite3
+*.db
+
+# Log-Dateien (können private Informationen enthalten)
+*.log
+Logs/
+logs/
+!README.txt
+!requirements.txt
+!*.md
+
+# Temporary und Cache Dateien
+*.tmp
+*.temp
+*~
+
+# IDE und Editor Dateien
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-spezifische Dateien
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup Dateien
+*.bak
+*.backup
+*.old
+
+# Python virtual environment Konfigurationsdateien (enthalten absolute Pfade)
+pyvenv.cfg
+
+# Weitere sensible Dateien
+secrets.py
+config.ini
+*.key
+*.pem
+*.p12
+*.pfx

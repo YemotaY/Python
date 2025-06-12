@@ -1,0 +1,17 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div id="header" style="width: 100%; margin: 0;padding: 0;">
+  <h1 style="display: inline-block;"><a href="{{ url_for('dashboard') }}">{{user}}</a></h1>
+  <h1 style="display: inline-block;"><a href="{{ url_for('profil') }}">| Einstellungen </a></h1>
+  <h1 style="display: inline-block;"><a href="{{ url_for('logout') }}">| Logout</a></h1>
+</div>
+<div id="content" style="clear: both;">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</div>

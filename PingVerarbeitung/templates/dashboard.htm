@@ -1,0 +1,16 @@
+{% extends 'base.htm' %}
+{% include './components/menu.htm' %}
+{% block header %}
+<h1 style="text-align: center;">{% block title %}Dashboard{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+{% for message in get_flashed_messages() %}
+<div class="flash">{{ message }}</div>
+{% endfor %}
+<form method="post">
+  {% for message in out %}
+  <input type="submit" name="{{ message }}" value="{{ message }}">
+  </br>
+  {% endfor %}
+</form>
+{% endblock %}
